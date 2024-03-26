@@ -26,6 +26,7 @@ def make():
     parser.add_argument(
         "--manual",
         type=str,
+        default='emma',
         choices=["none", "standard", "standardv2", "emma", "direct", "oracle"],
         help="which type of manuals to pass to the model",
     )

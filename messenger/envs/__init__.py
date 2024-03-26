@@ -53,3 +53,6 @@ def make_env(
         env = GridObsWrapper(env)
 
     return env
+
+if __name__ == "__main__":
+    make_env()

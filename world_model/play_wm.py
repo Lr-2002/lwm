@@ -16,12 +16,13 @@ import flags
 import train_wm as utils
 
 args = flags.make()
-world_model = utils.make_model(args)
+# world_model = utils.make_model(args)
+# world_model = None
 
 gpt_groundings = load_gpt_groundings(args)
 
 env = make_env(
-    args, world_model=world_model, max_episode_steps=32, gpt_groundings=gpt_groundings
+    args, max_episode_steps=32, gpt_groundings=gpt_groundings
 )
 
 combs = defaultdict(lambda: defaultdict(int))

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-use_wandb=0
+use_wandb=1
 
 seed=8291
 exp_name=emma_policy_${seed}

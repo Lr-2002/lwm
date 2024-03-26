@@ -193,7 +193,7 @@ def train(args, world_model, dataset, optimizer):
     best_eval_metric = defaultdict(lambda: defaultdict(lambda: 1e9))
     train_metric = defaultdict(list)
     for i in range(args.max_batches):
-        if i % args.log_every_batches == 0:
+        if i % args.log_every_batches == 10:
             # logging
             wandb_stats = {}
             wandb_stats["step"] = i

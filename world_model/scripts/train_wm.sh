@@ -18,7 +18,18 @@ exp_name=${version}_${manual}_seed_${seed}
 if [ -d "experiments/${exp_name}" ]; then
     rm -rf experiments/${exp_name}
 fi
-
+echo "python -u train_wm.py \
+        --version ${version} \
+        --exp_name ${exp_name} \
+        --manual ${manual} \
+        --use_wandb ${use_wandb} \
+        --hidden_size ${hidden_size} \
+        --encoder_layers ${num_layers} \
+        --decoder_layers ${num_layers} \
+        --encoder_num_heads ${num_heads} \
+        --decoder_num_heads ${num_heads} \
+        --dataset_path ${dataset} \
+        --seed ${seed}"
 python -u train_wm.py \
         --version ${version} \
         --exp_name ${exp_name} \
